@@ -39,6 +39,8 @@ class diagnostic:
     
     def diagnose(self, visit_to_asia, smoking, xray_result, dyspnea):
         evidence = {}
+        
+        #assign probabilities
         # Visit to Asia
         if visit_to_asia == "Yes":
             evidence["Asia"] = T
@@ -78,4 +80,3 @@ class diagnostic:
         best = max(probs, key=probs.get)
         return best, probs
 
-diag = diagnostic()
